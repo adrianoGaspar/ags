@@ -51,13 +51,13 @@ class OsHasItem
      * })
      */
     private $item;
-
+    
     /**
      * @var \Os
      *
-     * @ORM\ManyToOne(targetEntity="Os", inversedBy="osHasItens")
+     * @ORM\ManyToOne(targetEntity="Os", inversedBy="osHasItens", cascade={"persist", "remove"})
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="os_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="os_id", referencedColumnName="id", nullable=false)
      * })
      */
     private $os;
