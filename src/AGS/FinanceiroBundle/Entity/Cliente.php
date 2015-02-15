@@ -80,7 +80,7 @@ class Cliente
     public function getId()
     {
         return $this->id;
-    }
+}
 
     /**
      * Set email

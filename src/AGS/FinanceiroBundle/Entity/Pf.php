@@ -69,7 +69,7 @@ class Pf
     public function getId()
     {
         return $this->id;
-    }
+}
 
     /**
      * Set cpf

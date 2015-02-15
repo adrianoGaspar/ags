@@ -67,7 +67,6 @@ class Pj
     private $cliente;
 
 
-
     /**
      * Get id
      *
@@ -76,7 +75,7 @@ class Pj
     public function getId()
     {
         return $this->id;
-    }
+}
 
     /**
      * Set cnpj
