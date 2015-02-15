@@ -1,0 +1,34 @@
+Cidade:
+    type: entity
+    table: cidade
+    indexes:
+        fk_lav_cidades_estado1_idx:
+            columns:
+                - estado_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        cidade:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+    manyToOne:
+        estado:
+            targetEntity: Estado
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                estado_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

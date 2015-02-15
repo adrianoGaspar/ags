@@ -1,0 +1,114 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Creando Ordem de Serviço</h1>
+
+<form action="/os/create" method="POST" {{ form_enctype(form) }}>
+    {# render the task's only field: description #}
+    {{ form_row(form.cliente) }}
+    {{ form_row(form.dataPrometida) }}
+    {{ form_row(form.dataPacote) }}
+    {{ form_row(form.dataEntrega) }}
+    {{ form_row(form.valorCobrado) }}
+    {{ form_row(form.obs) }}
+    {{ form_row(form.status) }}
+
+    <h3>OsHasÍtens</h3>
+    <ul class="tags" data-prototype="{{ form_widget(form.osHasItens.vars.prototype)|e }}">
+        {# iterate over each existing tag and render its only field: name #}
+        {% for osHasItem in form.osHasItens %}
+            <li>{{ form_row(osHasItem.qtd) }}</li>
+            <li>{{ form_row(osHasItem.item) }}</li>
+            <li>{{ form_row(osHasItem.servico) }}</li>
+            <li>{{ form_row(osHasItem.un) }}</li>
+            <li>{{ form_row(osHasItem.valor) }}</li>
+        {% endfor %}
+    </ul>
+
+    {{ form_rest(form) }}
+</form>
+    
+    
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('os') }}">
+                Back to the list
+            </a>
+        </li>
+    </ul>
+
+                
+<script>
+// Get the ul that holds the collection of tags
+var collectionHolder = $('ul.tags');
+
+// setup an "add a tag" link
+var $addTagLink = $('<a href="#" class="add_tag_link">Adicionar tag</a>');
+var $newLinkLi = $('<li></li>').append($addTagLink);
+
+jQuery(document).ready(function() {
+    // add a delete link to all of the existing tag form li elements
+    collectionHolder.find('li').each(function() {
+        addTagFormDeleteLink($(this));
+    });
+
+    // add the "add a tag" anchor and li to the tags ul
+    collectionHolder.append($newLinkLi);
+
+    // count the current form inputs we have (e.g. 2), use that as the new
+    // index when inserting a new item (e.g. 2)
+    collectionHolder.data('index', collectionHolder.find(':input').length);
+
+    $addTagLink.on('click', function(e) {
+        // prevent the link from creating a "#" on the URL
+        e.preventDefault();
+
+        // add a new tag form (see next code block)
+        addTagForm(collectionHolder, $newLinkLi);
+    });
+    
+});        
+        
+    </script>
+    
+    
+<script>    
+    function addTagForm(collectionHolder, $newLinkLi) {
+        // Get the data-prototype explained earlier
+        var prototype = collectionHolder.data('prototype');
+
+        // get the new index
+        var index = collectionHolder.data('index');
+
+        // Replace '__name__' in the prototype's HTML to
+        // instead be a number based on the current collection's length.
+        var newForm = prototype.replace(/__name__/g, collectionHolder.children().length);
+
+        // increase the index with one for the next item
+        collectionHolder.data('index', index + 1);
+
+        // Display the form in the page in an li, before the "Add a tag" link li
+        var $newFormLi = $('<li></li>').append(newForm);
+        $newLinkLi.before($newFormLi);
+
+        // add a delete link to the new form
+        addTagFormDeleteLink($newFormLi);        
+    }    
+    </script>
+    
+    <script>    
+function addTagFormDeleteLink($tagFormLi) {
+    var $removeFormA = $('<a href="#">delete this tag</a>');
+    $tagFormLi.append($removeFormA);
+
+    $removeFormA.on('click', function(e) {
+        // prevent the link from creating a "#" on the URL
+        e.preventDefault();
+
+        // remove the li for the tag form
+        $tagFormLi.remove();
+    });
+}    
+    </script>
+        
+{% endblock %}

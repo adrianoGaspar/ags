@@ -1,0 +1,80 @@
+Lancamento:
+    type: entity
+    table: lancamento
+    indexes:
+        fk_lav_lancamentos_lav_plano_contas1_idx:
+            columns:
+                - plano_conta_id
+        fk_lav_lancamentos_lav_tipo_cobranca_pagamento1_idx:
+            columns:
+                - tipo_cobranca_pagamento_id
+        fk_lav_lancamentos_roll1_idx:
+            columns:
+                - os_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        dataVencimento:
+            type: date
+            nullable: false
+            comment: ''
+            column: data_vencimento
+        situacao:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        tipo:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+        valor:
+            type: float
+            nullable: false
+            precision: 12
+            scale: 2
+            comment: ''
+        obs:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+    manyToOne:
+        planoConta:
+            targetEntity: PlanoConta
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                plano_conta_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        tipoCobrancaPagamento:
+            targetEntity: TipoCobrancaPagamento
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                tipo_cobranca_pagamento_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        os:
+            targetEntity: Os
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                os_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

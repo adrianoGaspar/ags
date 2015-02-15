@@ -1,0 +1,53 @@
+Pf:
+    type: entity
+    table: pf
+    indexes:
+        fk_lav_pf_lav_clientes1_idx:
+            columns:
+                - cliente_id
+        idx_1:
+            columns:
+                - nome
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        cpf:
+            type: string
+            nullable: true
+            length: 25
+            fixed: false
+            comment: ''
+        rg:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        nome:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        aniversario:
+            type: date
+            nullable: true
+            comment: ''
+    manyToOne:
+        cliente:
+            targetEntity: Cliente
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                cliente_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

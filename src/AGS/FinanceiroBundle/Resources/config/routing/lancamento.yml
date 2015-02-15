@@ -1,0 +1,30 @@
+lancamento:
+    path:     /
+    defaults: { _controller: "FinanceiroBundle:Lancamento:index" }
+
+lancamento_show:
+    path:     /{id}/show
+    defaults: { _controller: "FinanceiroBundle:Lancamento:show" }
+
+lancamento_new:
+    path:     /new
+    defaults: { _controller: "FinanceiroBundle:Lancamento:new" }
+
+lancamento_create:
+    path:     /create
+    defaults: { _controller: "FinanceiroBundle:Lancamento:create" }
+    methods:  POST
+
+lancamento_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FinanceiroBundle:Lancamento:edit" }
+
+lancamento_update:
+    path:     /{id}/update
+    defaults: { _controller: "FinanceiroBundle:Lancamento:update" }
+    methods:  [POST, PUT]
+
+lancamento_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FinanceiroBundle:Lancamento:delete" }
+    methods:  [POST, DELETE]

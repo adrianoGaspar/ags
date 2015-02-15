@@ -1,0 +1,30 @@
+item:
+    path:     /
+    defaults: { _controller: "FinanceiroBundle:Item:index" }
+
+item_show:
+    path:     /{id}/show
+    defaults: { _controller: "FinanceiroBundle:Item:show" }
+
+item_new:
+    path:     /new
+    defaults: { _controller: "FinanceiroBundle:Item:new" }
+
+item_create:
+    path:     /create
+    defaults: { _controller: "FinanceiroBundle:Item:create" }
+    methods:  POST
+
+item_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FinanceiroBundle:Item:edit" }
+
+item_update:
+    path:     /{id}/update
+    defaults: { _controller: "FinanceiroBundle:Item:update" }
+    methods:  [POST, PUT]
+
+item_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FinanceiroBundle:Item:delete" }
+    methods:  [POST, DELETE]

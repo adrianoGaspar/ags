@@ -1,0 +1,30 @@
+planoconta:
+    path:     /
+    defaults: { _controller: "FinanceiroBundle:PlanoConta:index" }
+
+planoconta_show:
+    path:     /{id}/show
+    defaults: { _controller: "FinanceiroBundle:PlanoConta:show" }
+
+planoconta_new:
+    path:     /new
+    defaults: { _controller: "FinanceiroBundle:PlanoConta:new" }
+
+planoconta_create:
+    path:     /create
+    defaults: { _controller: "FinanceiroBundle:PlanoConta:create" }
+    methods:  POST
+
+planoconta_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FinanceiroBundle:PlanoConta:edit" }
+
+planoconta_update:
+    path:     /{id}/update
+    defaults: { _controller: "FinanceiroBundle:PlanoConta:update" }
+    methods:  [POST, PUT]
+
+planoconta_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FinanceiroBundle:PlanoConta:delete" }
+    methods:  [POST, DELETE]

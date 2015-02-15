@@ -1,0 +1,38 @@
+Insumo:
+    type: entity
+    table: insumo
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        insumo:
+            type: string
+            nullable: false
+            length: 150
+            fixed: false
+            comment: ''
+        embalagem:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+        un:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+        descricao:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

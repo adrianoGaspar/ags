@@ -1,0 +1,70 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Os</h1>
+
+    <table class="table">
+        <thead>
+            <th>Id</th>
+{#            <th>Datacadastro</th>#}
+            <th>Dataprometida</th>
+            <th>Datapacote</th>
+            <th>Dataentrega</th>
+            <th>Valorcobrado</th>
+            <th>Obs</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ entity.id }}</td>
+{#                <td>{{ entity.dataCadastro|date('Y-m-d H:i:s') }}</td>#}
+                <td>{{ entity.dataPrometida|date('d/m/Y H:i:s') }}</td>
+                <td>{{ entity.dataPacote|date('d/m/Y H:i:s') }}</td>
+                <td>{{ entity.dataEntrega|date('d/m/Y H:i:s') }}</td>
+                <td>{{ entity.valorCobrado }}</td>
+                <td>{{ entity.obs }}</td>
+                <td>{{ entity.status }}</td>
+            </tr>
+            <tr>
+                <th>Ítens</th>
+                <td colspan="6">
+                    <table class="table">
+                        <thead>
+                            <th>Qtd</th>
+                            <th>Ítem</th>
+                            <th>Serviço</th>
+                            <th>Un</th>
+                            <th>Valor</th>
+                        </thead>
+                        <tbody>
+                            {% for e in entity.osHasItens %}
+                            <tr>
+                                <td>{{ e.qtd }}</td>
+                                <td>{{ e.item }}</td>
+                                <td>{{ e.servico  }}</td>
+                                <td>{{ e.un }}</td>
+                                <td>{{ e.valor }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('os') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('os_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

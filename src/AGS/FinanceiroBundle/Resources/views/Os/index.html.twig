@@ -1,0 +1,53 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Lista de Ordens de Serviço</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Datacadastro</th>
+                <th>Dataprometida</th>
+                <th>Datapacote</th>
+                <th>Dataentrega</th>
+                <th>Valorcobrado</th>
+                <th>Obs</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('os_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{#{% if entity.dataCadastro %}{{ entity.dataCadastro|date('d/m/Y H:i:s') }}{% endif %}#}</td>
+                <td>{% if entity.dataPrometida %}{{ entity.dataPrometida|date('d/m/Y H:i:s') }}{% endif %}</td>
+                <td>{% if entity.dataPacote %}{{ entity.dataPacote|date('d/m/Y H:i:s') }}{% endif %}</td>
+                <td>{% if entity.dataEntrega %}{{ entity.dataEntrega|date('d/m/Y H:i:s') }}{% endif %}</td>
+                <td>R$ {{ entity.valorCobrado }}</td>
+                <td>{{ entity.obs }}</td>
+                <td>{{ entity.status }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('os_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('os_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('os_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

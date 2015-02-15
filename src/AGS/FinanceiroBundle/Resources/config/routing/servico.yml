@@ -1,0 +1,30 @@
+servico:
+    path:     /
+    defaults: { _controller: "FinanceiroBundle:Servico:index" }
+
+servico_show:
+    path:     /{id}/show
+    defaults: { _controller: "FinanceiroBundle:Servico:show" }
+
+servico_new:
+    path:     /new
+    defaults: { _controller: "FinanceiroBundle:Servico:new" }
+
+servico_create:
+    path:     /create
+    defaults: { _controller: "FinanceiroBundle:Servico:create" }
+    methods:  POST
+
+servico_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FinanceiroBundle:Servico:edit" }
+
+servico_update:
+    path:     /{id}/update
+    defaults: { _controller: "FinanceiroBundle:Servico:update" }
+    methods:  [POST, PUT]
+
+servico_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FinanceiroBundle:Servico:delete" }
+    methods:  [POST, DELETE]

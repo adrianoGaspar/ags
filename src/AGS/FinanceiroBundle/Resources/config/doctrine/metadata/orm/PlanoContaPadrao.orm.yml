@@ -1,0 +1,51 @@
+PlanoContaPadrao:
+    type: entity
+    table: plano_conta_padrao
+    indexes:
+        fk_plano_conta_padrao_lav_plano_contas1_idx:
+            columns:
+                - plano_conta_id_os_venda_pf
+        fk_plano_conta_padrao_lav_plano_contas2_idx:
+            columns:
+                - plano_conta_id_os_venda_pj
+        fk_plano_conta_padrao_lav_plano_contas3_idx:
+            columns:
+                - plano_conta_id_pedido_fornecedor
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        planoContaOsVendaPf:
+            targetEntity: PlanoConta
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                plano_conta_id_os_venda_pf:
+                    referencedColumnName: id
+            orphanRemoval: false
+        planoContaOsVendaPj:
+            targetEntity: PlanoConta
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                plano_conta_id_os_venda_pj:
+                    referencedColumnName: id
+            orphanRemoval: false
+        planoContaPedidoFornecedor:
+            targetEntity: PlanoConta
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                plano_conta_id_pedido_fornecedor:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

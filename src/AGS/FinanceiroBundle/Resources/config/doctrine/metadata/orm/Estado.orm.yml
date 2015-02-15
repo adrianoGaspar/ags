@@ -1,0 +1,34 @@
+Estado:
+    type: entity
+    table: estado
+    indexes:
+        fk_estado_lav_paises1_idx:
+            columns:
+                - pais_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        estado:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+    manyToOne:
+        pais:
+            targetEntity: Pais
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                pais_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

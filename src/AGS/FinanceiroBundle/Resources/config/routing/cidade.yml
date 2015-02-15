@@ -1,0 +1,30 @@
+cidade:
+    path:     /
+    defaults: { _controller: "FinanceiroBundle:Cidade:index" }
+
+cidade_show:
+    path:     /{id}/show
+    defaults: { _controller: "FinanceiroBundle:Cidade:show" }
+
+cidade_new:
+    path:     /new
+    defaults: { _controller: "FinanceiroBundle:Cidade:new" }
+
+cidade_create:
+    path:     /create
+    defaults: { _controller: "FinanceiroBundle:Cidade:create" }
+    methods:  POST
+
+cidade_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FinanceiroBundle:Cidade:edit" }
+
+cidade_update:
+    path:     /{id}/update
+    defaults: { _controller: "FinanceiroBundle:Cidade:update" }
+    methods:  [POST, PUT]
+
+cidade_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FinanceiroBundle:Cidade:delete" }
+    methods:  [POST, DELETE]

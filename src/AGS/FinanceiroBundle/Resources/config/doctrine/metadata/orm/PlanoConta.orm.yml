@@ -1,0 +1,34 @@
+PlanoConta:
+    type: entity
+    table: plano_conta
+    indexes:
+        fk_lav_plano_contas_lav_plano_contas1_idx:
+            columns:
+                - id_pai
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nome:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+    manyToOne:
+        idPai:
+            targetEntity: PlanoConta
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_pai:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

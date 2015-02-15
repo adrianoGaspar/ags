@@ -1,0 +1,69 @@
+Os:
+    type: entity
+    table: os
+    indexes:
+        fk_os_cliente1_idx:
+            columns:
+                - cliente_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        dataCadastro:
+            type: datetime
+            nullable: false
+            comment: ''
+            default: CURRENT_TIMESTAMP
+            column: data_cadastro
+        dataPrometida:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: data_prometida
+        dataPacote:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: data_pacote
+        dataEntrega:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: data_entrega
+        valorCobrado:
+            type: float
+            nullable: false
+            precision: 12
+            scale: 2
+            comment: ''
+            default: '0.00'
+            column: valor_cobrado
+        obs:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        status:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    manyToOne:
+        cliente:
+            targetEntity: Cliente
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                cliente_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

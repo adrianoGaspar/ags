@@ -1,0 +1,51 @@
+financeiro_cliente:
+    resource: "@FinanceiroBundle/Resources/config/routing/cliente.yml"
+    prefix:   /cliente
+
+financeiro_endereco:
+    resource: "@FinanceiroBundle/Resources/config/routing/endereco.yml"
+    prefix:   /endereco
+
+financeiro_oshasitem:
+    resource: "@FinanceiroBundle/Resources/config/routing/oshasitem.yml"
+    prefix:   /oshasitem
+
+financeiro_servico:
+    resource: "@FinanceiroBundle/Resources/config/routing/servico.yml"
+    prefix:   /servico
+
+financeiro_item:
+    resource: "@FinanceiroBundle/Resources/config/routing/item.yml"
+    prefix:   /item
+
+financeiro_os:
+    resource: "@FinanceiroBundle/Resources/config/routing/os.yml"
+    prefix:   /os
+
+financeiro_planoconta:
+    resource: "@FinanceiroBundle/Resources/config/routing/planoconta.yml"
+    prefix:   /planoconta
+
+financeiro_lancamento:
+    resource: "@FinanceiroBundle/Resources/config/routing/lancamento.yml"
+    prefix:   /lancamento
+
+financeiro_tipocobrancapagamento:
+    resource: "@FinanceiroBundle/Resources/config/routing/tipocobrancapagamento.yml"
+    prefix:   /tipocobrancapagamento
+
+financeiro_estado:
+    resource: "@FinanceiroBundle/Resources/config/routing/estado.yml"
+    prefix:   /estado
+
+financeiro_cidade:
+    resource: "@FinanceiroBundle/Resources/config/routing/cidade.yml"
+    prefix:   /cidade
+
+financeiro_pais:
+    resource: "@FinanceiroBundle/Resources/config/routing/pais.yml"
+    prefix:   /pais
+
+financeiro_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: FinanceiroBundle:Default:index }

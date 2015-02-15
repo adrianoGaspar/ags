@@ -1,0 +1,64 @@
+Pj:
+    type: entity
+    table: pj
+    indexes:
+        fk_lav_pj_lav_clientes1_idx:
+            columns:
+                - cliente_id
+        idx_1:
+            columns:
+                - nome_fantasia
+                - razao_social
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        cnpj:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        ie:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        im:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        razaoSocial:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: razao_social
+        nomeFantasia:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: nome_fantasia
+    manyToOne:
+        cliente:
+            targetEntity: Cliente
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                cliente_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

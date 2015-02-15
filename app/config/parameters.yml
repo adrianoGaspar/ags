@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: lavanderiaSymfony
+    database_user: root
+    database_password: 'Bra3uza=#'
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    locale: en
+    secret: c668f1a0af4f39ced0ecc6650fdb9c8951c60dbc

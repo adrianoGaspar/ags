@@ -1,0 +1,53 @@
+FornecedorHasInsumo:
+    type: entity
+    table: fornecedor_has_insumo
+    indexes:
+        fk_fornecedores_has_insumos_insumos1_idx:
+            columns:
+                - insumo_id
+        fk_fornecedores_has_insumos_fornecedores1_idx:
+            columns:
+                - fornecedor_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        valorTabela:
+            type: float
+            nullable: true
+            precision: 12
+            scale: 2
+            comment: ''
+            default: '0.00'
+            column: valor_tabela
+        data:
+            type: datetime
+            nullable: false
+            comment: ''
+            default: CURRENT_TIMESTAMP
+    manyToOne:
+        fornecedor:
+            targetEntity: Fornecedor
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fornecedor_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        insumo:
+            targetEntity: Insumo
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                insumo_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

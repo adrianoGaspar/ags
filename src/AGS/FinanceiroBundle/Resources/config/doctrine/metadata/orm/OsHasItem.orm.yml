@@ -1,0 +1,69 @@
+OsHasItem:
+    type: entity
+    table: os_has_item
+    indexes:
+        fk_os_has_item_item1_idx:
+            columns:
+                - item_id
+        fk_os_has_item_os1_idx:
+            columns:
+                - os_id
+        fk_os_has_item_servico1_idx:
+            columns:
+                - servico_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        qtd:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        valor:
+            type: float
+            nullable: false
+            precision: 8
+            scale: 2
+            comment: ''
+        un:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+    manyToOne:
+        item:
+            targetEntity: Item
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                item_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        os:
+            targetEntity: Os
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                os_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        servico:
+            targetEntity: Servico
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                servico_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

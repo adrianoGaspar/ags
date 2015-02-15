@@ -1,0 +1,35 @@
+Fornecedor:
+    type: entity
+    table: fornecedor
+    indexes:
+        fk_fornecedores_lav_pj1_idx:
+            columns:
+                - pj_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        statusFornecedor:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '1'
+            column: status_fornecedor
+    manyToOne:
+        pj:
+            targetEntity: Pj
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                pj_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
