@@ -1,7 +1,3 @@
-financeiro_cliente:
-    resource: "@FinanceiroBundle/Resources/config/routing/cliente.yml"
-    prefix:   /cliente
-
 financeiro_endereco:
     resource: "@FinanceiroBundle/Resources/config/routing/endereco.yml"
     prefix:   /endereco
@@ -41,7 +37,3 @@ financeiro_cidade:
 financeiro_pais:
     resource: "@FinanceiroBundle/Resources/config/routing/pais.yml"
     prefix:   /pais
-
-financeiro_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: FinanceiroBundle:Default:index }
