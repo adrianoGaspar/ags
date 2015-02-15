@@ -6,10 +6,6 @@ financeiro_endereco:
     resource: "@FinanceiroBundle/Resources/config/routing/endereco.yml"
     prefix:   /endereco
 
-financeiro_oshasitem:
-    resource: "@FinanceiroBundle/Resources/config/routing/oshasitem.yml"
-    prefix:   /oshasitem
-
 financeiro_servico:
     resource: "@FinanceiroBundle/Resources/config/routing/servico.yml"
     prefix:   /servico
