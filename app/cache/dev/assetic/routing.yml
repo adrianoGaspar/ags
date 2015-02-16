@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: /home/adriano/dev/www/SymfonyLavanderia/app/config/routing_dev.yml
+    resource: /home/adriano/dev/www/ags/app/config/routing_dev.yml
