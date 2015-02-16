@@ -71,7 +71,6 @@ class Cliente
     private $created;
 
 
-
     /**
      * Get id
      *
@@ -238,8 +237,6 @@ class Cliente
     public function __toString()
     {
         return $this->email;
-    }
-
-    
+    }    
     
 }
