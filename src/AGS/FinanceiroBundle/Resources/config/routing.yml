@@ -1,3 +1,7 @@
+financeiro_cliente:
+    resource: "@FinanceiroBundle/Resources/config/routing/cliente.yml"
+    prefix:   /cliente
+
 financeiro_endereco:
     resource: "@FinanceiroBundle/Resources/config/routing/endereco.yml"
     prefix:   /endereco

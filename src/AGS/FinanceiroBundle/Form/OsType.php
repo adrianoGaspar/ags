@@ -23,7 +23,7 @@ class OsType extends AbstractType
             ->add('valorCobrado')
             ->add('obs')
             ->add('status')
-        
+
             //esse cara é o itens e serviços aparentemente estou inserindo outro form
             ->add('osHasItens', 'collection', array(
                 'type' => new OsHasItemType(),
@@ -31,9 +31,9 @@ class OsType extends AbstractType
                 'allow_delete' => true,
                 'by_reference' => false,
             ));
-               
+
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */

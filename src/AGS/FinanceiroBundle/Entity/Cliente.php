@@ -72,6 +72,23 @@ class Cliente
 
 
     /**
+     * @ORM\OneToOne(targetEntity="Pf", mappedBy="cliente", cascade={"persist"})
+     * 
+     */
+    private $pf;
+
+    public function setPf(Pf $pf)
+    {
+        $pf->setCliente($this);
+        $this->pf = $pf;
+    }
+    
+    function getPf() {
+        return $this->pf;
+    }
+
+    
+    /**
      * Get id
      *
      * @return integer 

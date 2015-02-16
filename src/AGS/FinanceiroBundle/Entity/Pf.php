@@ -52,7 +52,7 @@ class Pf
     /**
      * @var \Cliente
      *
-     * @ORM\ManyToOne(targetEntity="Cliente")
+     * @ORM\OneToOne(targetEntity="Cliente", inversedBy="pf", cascade={"persist", "remove"})
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="cliente_id", referencedColumnName="id")
      * })
