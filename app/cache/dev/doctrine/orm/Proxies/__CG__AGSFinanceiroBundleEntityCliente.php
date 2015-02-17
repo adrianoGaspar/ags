@@ -64,10 +64,10 @@ class Cliente extends \AGS\FinanceiroBundle\Entity\Cliente implements \Doctrine\
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'id', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'email', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'telefone', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'celular', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'status', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'tipo', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'observacao', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'created', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'pf');
+            return array('__isInitialized__', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'id', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'email', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'telefone', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'celular', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'status', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'tipo', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'observacao', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'created', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'pf', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'pj');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'id', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'email', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'telefone', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'celular', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'status', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'tipo', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'observacao', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'created', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'pf');
+        return array('__isInitialized__', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'id', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'email', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'telefone', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'celular', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'status', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'tipo', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'observacao', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'created', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'pf', '' . "\0" . 'AGS\\FinanceiroBundle\\Entity\\Cliente' . "\0" . 'pj');
     }
 
     /**
@@ -193,6 +193,28 @@ class Cliente extends \AGS\FinanceiroBundle\Entity\Cliente implements \Doctrine\
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPf', array());
 
         return parent::getPf();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPj(\AGS\FinanceiroBundle\Entity\Pj $pj)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPj', array($pj));
+
+        return parent::setPj($pj);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPj()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPj', array());
+
+        return parent::getPj();
     }
 
     /**

@@ -59,7 +59,7 @@ class Pj
     /**
      * @var \Cliente
      *
-     * @ORM\ManyToOne(targetEntity="Cliente")
+     * @ORM\OneToOne(targetEntity="Cliente", inversedBy="pj", cascade={"persist", "remove"})
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="cliente_id", referencedColumnName="id")
      * })

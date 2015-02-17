@@ -87,6 +87,22 @@ class Cliente
         return $this->pf;
     }
 
+    /**
+     * @ORM\OneToOne(targetEntity="Pj", mappedBy="cliente", cascade={"persist"})
+     * 
+     */
+    private $pj;
+
+    public function setPj(Pj $pj)
+    {
+        $pj->setCliente($this);
+        $this->pj = $pj;
+    }
+    
+    function getPj() {
+        return $this->pj;
+    }
+
     
     /**
      * Get id

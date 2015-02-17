@@ -66,107 +66,116 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
         
     </head>
     <body>
-        
-        
         <div class=\"navbar-header navbar-default\">
-          <a href=\"index.php\" class=\"navbar-brand\">Lavanderia Imperatriz</a>
-          <button class=\"navbar-toggle\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbar-main\">
-            <span class=\"icon-bar\"></span>
-            <span class=\"icon-bar\"></span>
-            <span class=\"icon-bar\"></span>
-          </button>
+            <a href=\"/\" class=\"navbar-brand\">Lavanderia Imperatriz</a>
+            <button class=\"navbar-toggle\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbar-main\">
+                <span class=\"icon-bar\"></span>
+                <span class=\"icon-bar\"></span>
+                <span class=\"icon-bar\"></span>
+            </button>
         </div>
         <div class=\"navbar-collapse collapse  navbar-default\" id=\"navbar-main\">
-          <ul class=\"nav navbar-nav navbar-default\">
-            <li class=\"dropdown\">
-              <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">PDV <span class=\"caret\"></span></a>
-              <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
-                <li><a tabindex=\"-1\" href=\"roll.php\">Cadastrar Roll</a></li>
-                <li class=\"divider\"></li>
-                <li><a tabindex=\"-1\" href=\"consultaRoll.php\">Consultar Roll</a></li>
-              </ul>
-            </li>
-            <li class=\"dropdown\">
-              <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">Clientes <span class=\"caret\"></span></a>
-              <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
-                <li><a tabindex=\"-1\" href=\"cadastrarClientePj.php\">Cadastrar PJ</a></li>
-                <li><a tabindex=\"-1\" href=\"cadastrarClientePf.php\">Cadastrar PF</a></li>
-                <li><a tabindex=\"-1\" href=\"consultarCliente.php\">Consultar</a></li>
-              </ul>
-            </li>
-            <li class=\"dropdown\">
-              <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">Fornecedores <span class=\"caret\"></span></a>
-              <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
-                <li><a tabindex=\"-1\" href=\"cadastrarPedido.php\">Cadastrar Pedidos</a></li>
-                <li><a tabindex=\"-1\" href=\"consultarPedido.php\">Consultar Pedidos</a></li>
-                <li class=\"divider\"></li>
-                <li><a tabindex=\"-1\" href=\"cadastrarFornecedor.php\">Cadastrar Fornecedor</a></li>
-                <li><a tabindex=\"-1\" href=\"consultarFornecedor.php\">Consultar Fornecedor</a></li>
-                <li class=\"divider\"></li>
-                <li><a tabindex=\"-1\" href=\"cadastrarInsumo.php\">Cadastrar Insumo</a></li>
-                <li><a tabindex=\"-1\" href=\"consultarInsumo.php\">Consultar Insumo</a></li>
-              </ul>
-            </li>
-            <li class=\"dropdown\">
-              <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">Financeiro <span class=\"caret\"></span></a>
-              <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
-                <li><a tabindex=\"-1\" href=\"agendarMovimentacao.php\">Cadastrar Movimentação</a></li>
-                <li><a tabindex=\"-1\" href=\"consultarMovimentacao.php\">Consultar Movimentação</a></li>
-                <li class=\"divider\"></li>
-                <li><a tabindex=\"-1\" href=\"editarPlanoContas.php\">Plano de contas</a></li>
-                <li class=\"divider\"></li>
-                <li><a tabindex=\"-1\" href=\"cadastrarBeneficiario.php\">Beneficiários</a></li>
-              </ul>
-            </li>
-            <li class=\"dropdown\">
-              <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">Relatórios <span class=\"caret\"></span></a>
-              <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
-                <li><a tabindex=\"-1\" href=\"relatorioAnalitico.php\">Analítico</a></li>
-              </ul>
-            </li>
-            <li class=\"dropdown\">
-              <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">Configurações <span class=\"caret\"></span></a>
-              <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
-                  <li><a tabindex=\"-1\" href=\"pontosColeta.php\">Pontos de coleta</a></li>
-                <li class=\"divider\"></li>
-                <li><a tabindex=\"-1\" href=\"cadastrarPais.php\">Cadastrar País</a></li>
-                <li><a tabindex=\"-1\" href=\"cadastrarEstado.php\">Cadastrar Estado</a></li>
-                <li><a tabindex=\"-1\" href=\"cadastrarCidade.php\">Cadastrar Cidade</a></li>
-                <li class=\"divider\"></li>
-                <li><a tabindex=\"-1\" href=\"cadastrarFormaPagamento.php\">Cadastrar Forma de pagamento</a></li>
-                <li class=\"divider\"></li>
-                <li><a tabindex=\"-1\" href=\"cadastrarServico.php\">Cadastrar Serviço</a></li>
-                <li><a tabindex=\"-1\" href=\"cadastrarPeca.php\">Cadastrar Peça</a></li>
-                <li><a tabindex=\"-1\" href=\"cadastrarTecido.php\">Cadastrar Tecido</a></li>
-                <li class=\"divider\"></li>
-                <li><a tabindex=\"-1\" href=\"planoContaPadrao.php\">Plano de contas padrão</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href=\"#\">Ajuda</a>
-            </li>
-          </ul>
+            <ul class=\"nav navbar-nav navbar-default\">
+                <li class=\"dropdown\">
+                    <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">PDV <span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
+                        <li><a tabindex=\"-1\" href=\"";
+        // line 40
+        echo $this->env->getExtension('routing')->getPath("os_new");
+        echo "\">Cadastrar Roll</a></li>
+                        <li class=\"divider\"></li>
+                        <li><a tabindex=\"-1\" href=\"";
+        // line 42
+        echo $this->env->getExtension('routing')->getPath("os");
+        echo "\">Consultar Roll</a></li>
+                    </ul>
+                </li>
+                <li class=\"dropdown\">
+                    <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">Clientes <span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
+                        <li><a tabindex=\"-1\" href=\"cadastrarClientePj.php\">Cadastrar PJ</a></li>
+                        <li><a tabindex=\"-1\" href=\"cadastrarClientePf.php\">Cadastrar PF</a></li>
+                        <li><a tabindex=\"-1\" href=\"";
+        // line 50
+        echo $this->env->getExtension('routing')->getPath("cliente");
+        echo "\">Consultar</a></li>
+                    </ul>
+                </li>
+                <li class=\"dropdown\">
+                    <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">Fornecedores <span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
+                        <li><a tabindex=\"-1\" href=\"cadastrarPedido.php\">Cadastrar Pedidos</a></li>
+                        <li><a tabindex=\"-1\" href=\"consultarPedido.php\">Consultar Pedidos</a></li>
+                        <li class=\"divider\"></li>
+                        <li><a tabindex=\"-1\" href=\"cadastrarFornecedor.php\">Cadastrar Fornecedor</a></li>
+                        <li><a tabindex=\"-1\" href=\"consultarFornecedor.php\">Consultar Fornecedor</a></li>
+                        <li class=\"divider\"></li>
+                        <li><a tabindex=\"-1\" href=\"cadastrarInsumo.php\">Cadastrar Insumo</a></li>
+                        <li><a tabindex=\"-1\" href=\"consultarInsumo.php\">Consultar Insumo</a></li>
+                    </ul>
+                </li>
+                <li class=\"dropdown\">
+                    <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">Financeiro <span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
+                        <li><a tabindex=\"-1\" href=\"agendarMovimentacao.php\">Cadastrar Movimentação</a></li>
+                        <li><a tabindex=\"-1\" href=\"consultarMovimentacao.php\">Consultar Movimentação</a></li>
+                        <li class=\"divider\"></li>
+                        <li><a tabindex=\"-1\" href=\"";
+        // line 72
+        echo $this->env->getExtension('routing')->getPath("planoconta");
+        echo "\">Plano de contas</a></li>
+                        <li class=\"divider\"></li>
+                        <li><a tabindex=\"-1\" href=\"cadastrarBeneficiario.php\">Beneficiários</a></li>
+                    </ul>
+                </li>
+                <li class=\"dropdown\">
+                    <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">Relatórios <span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
+                        <li><a tabindex=\"-1\" href=\"relatorioAnalitico.php\">Analítico</a></li>
+                    </ul>
+                </li>
+                <li class=\"dropdown\">
+                    <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">Configurações <span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
+                        <li><a tabindex=\"-1\" href=\"pontosColeta.php\">Pontos de coleta</a></li>
+                        <li class=\"divider\"></li>
+                        <li><a tabindex=\"-1\" href=\"cadastrarPais.php\">Cadastrar País</a></li>
+                        <li><a tabindex=\"-1\" href=\"cadastrarEstado.php\">Cadastrar Estado</a></li>
+                        <li><a tabindex=\"-1\" href=\"cadastrarCidade.php\">Cadastrar Cidade</a></li>
+                        <li class=\"divider\"></li>
+                        <li><a tabindex=\"-1\" href=\"cadastrarFormaPagamento.php\">Cadastrar Forma de pagamento</a></li>
+                        <li class=\"divider\"></li>
+                        <li><a tabindex=\"-1\" href=\"cadastrarServico.php\">Cadastrar Serviço</a></li>
+                        <li><a tabindex=\"-1\" href=\"cadastrarPeca.php\">Cadastrar Peça</a></li>
+                        <li><a tabindex=\"-1\" href=\"cadastrarTecido.php\">Cadastrar Tecido</a></li>
+                        <li class=\"divider\"></li>
+                        <li><a tabindex=\"-1\" href=\"planoContaPadrao.php\">Plano de contas padrão</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href=\"#\">Ajuda</a>
+                </li>
+            </ul>
 
-          <ul class=\"nav navbar-nav navbar-right\">
-            <li><a href=\"login.php\">Sair</a></li>
-          </ul>
+            <ul class=\"nav navbar-nav navbar-right\">
+                <li><a href=\"login.php\">Sair</a></li>
+            </ul>
         </div>
         
-        
         ";
-        // line 114
+        // line 111
         $this->displayBlock('body', $context, $blocks);
-        // line 115
+        // line 112
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 116
+        // line 113
         echo "
         ";
-        // line 117
+        // line 114
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "a56fa94_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_a56fa94_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/js/a56fa94_part_1.js");
-            // line 118
+            // line 115
             echo "            <script type=\"text/javascript\" src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
@@ -186,7 +195,7 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
         ";
         }
         unset($context["asset_url"]);
-        // line 120
+        // line 117
         echo "    </body>
 </html>
 ";
@@ -203,12 +212,12 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
     {
     }
 
-    // line 114
+    // line 111
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 115
+    // line 112
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -225,6 +234,6 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
 
     public function getDebugInfo()
     {
-        return array (  212 => 115,  207 => 114,  202 => 6,  196 => 5,  190 => 120,  170 => 118,  166 => 117,  163 => 116,  160 => 115,  158 => 114,  63 => 21,  59 => 12,  45 => 10,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
+        return array (  221 => 112,  216 => 111,  211 => 6,  205 => 5,  199 => 117,  179 => 115,  175 => 114,  172 => 113,  169 => 112,  167 => 111,  125 => 72,  100 => 50,  89 => 42,  84 => 40,  63 => 21,  59 => 12,  45 => 10,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
     }
 }

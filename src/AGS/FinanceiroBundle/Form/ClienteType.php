@@ -22,8 +22,8 @@ class ClienteType extends AbstractType
             ->add('tipo')
             ->add('observacao')
 //            ->add('created')
-            //esse cara é o itens e serviços aparentemente estou inserindo outro form
             ->add('pf',new PfType())
+            ->add('pj',new PjType())
         ;
     }
     
