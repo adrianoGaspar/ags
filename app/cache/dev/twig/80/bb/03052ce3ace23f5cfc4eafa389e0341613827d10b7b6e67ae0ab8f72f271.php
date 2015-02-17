@@ -38,7 +38,7 @@ class __TwigTemplate_80bb03052ce3ace23f5cfc4eafa389e0341613827d10b7b6e67ae0ab8f7
         // line 4
         echo "<h1>Cidade list</h1>
 
-    <table class=\"records_list\">
+    <table class=\"table\">
         <thead>
             <tr>
                 <th>Id</th>

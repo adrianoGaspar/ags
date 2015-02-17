@@ -139,9 +139,18 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
                     <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
                         <li><a tabindex=\"-1\" href=\"pontosColeta.php\">Pontos de coleta</a></li>
                         <li class=\"divider\"></li>
-                        <li><a tabindex=\"-1\" href=\"cadastrarPais.php\">Cadastrar País</a></li>
-                        <li><a tabindex=\"-1\" href=\"cadastrarEstado.php\">Cadastrar Estado</a></li>
-                        <li><a tabindex=\"-1\" href=\"cadastrarCidade.php\">Cadastrar Cidade</a></li>
+                        <li><a tabindex=\"-1\" href=\"";
+        // line 88
+        echo $this->env->getExtension('routing')->getPath("pais");
+        echo "\">Países</a></li>
+                        <li><a tabindex=\"-1\" href=\"";
+        // line 89
+        echo $this->env->getExtension('routing')->getPath("estado");
+        echo "\">Estados</a></li>
+                        <li><a tabindex=\"-1\" href=\"";
+        // line 90
+        echo $this->env->getExtension('routing')->getPath("cidade");
+        echo "\">Cidades</a></li>
                         <li class=\"divider\"></li>
                         <li><a tabindex=\"-1\" href=\"cadastrarFormaPagamento.php\">Cadastrar Forma de pagamento</a></li>
                         <li class=\"divider\"></li>
@@ -234,6 +243,6 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
 
     public function getDebugInfo()
     {
-        return array (  221 => 112,  216 => 111,  211 => 6,  205 => 5,  199 => 117,  179 => 115,  175 => 114,  172 => 113,  169 => 112,  167 => 111,  125 => 72,  100 => 50,  89 => 42,  84 => 40,  63 => 21,  59 => 12,  45 => 10,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
+        return array (  230 => 112,  225 => 111,  220 => 6,  214 => 5,  208 => 117,  188 => 115,  184 => 114,  181 => 113,  178 => 112,  176 => 111,  152 => 90,  148 => 89,  144 => 88,  125 => 72,  100 => 50,  89 => 42,  84 => 40,  63 => 21,  59 => 12,  45 => 10,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
     }
 }
