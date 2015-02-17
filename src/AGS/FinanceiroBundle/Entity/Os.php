@@ -25,9 +25,9 @@ class Os
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="data_cadastro", type="datetime", nullable=false)
+     * @ORM\Column(name="data_cadastro", type="datetime", nullable=true)
      */
-//    private $dataCadastro = 'CURRENT_TIMESTAMP';
+    private $dataCadastro;
 
     /**
      * @var \DateTime
@@ -301,5 +301,14 @@ class Os
     public function getCliente()
     {
         return $this->cliente;
+    }
+    
+    /**
+     * 
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->obs;
     }
 }

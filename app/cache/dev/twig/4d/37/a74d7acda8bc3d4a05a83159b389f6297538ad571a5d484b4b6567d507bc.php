@@ -38,7 +38,7 @@ class __TwigTemplate_4d37a74d7acda8bc3d4a05a83159b389f6297538ad571a5d484b4b6567d
         // line 4
         echo "<h1>TipoCobrancaPagamento</h1>
 
-    <table class=\"record_properties\">
+    <table class=\"table\">
         <tbody>
             <tr>
                 <th>Id</th>

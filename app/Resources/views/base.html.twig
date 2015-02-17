@@ -43,11 +43,9 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Clientes <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Clientes<span class="caret"></span></a>
                     <ul class="dropdown-menu navbar-default" aria-labelledby="themes">
-                        <li><a tabindex="-1" href="cadastrarClientePj.php">Cadastrar PJ</a></li>
-                        <li><a tabindex="-1" href="cadastrarClientePf.php">Cadastrar PF</a></li>
-                        <li><a tabindex="-1" href="{{ path('cliente') }}">Consultar</a></li>
+                        <li><a tabindex="-1" href="{{ path('cliente') }}">Clientes</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -89,11 +87,10 @@
                         <li><a tabindex="-1" href="{{ path('estado') }}">Estados</a></li>
                         <li><a tabindex="-1" href="{{ path('cidade') }}">Cidades</a></li>
                         <li class="divider"></li>
-                        <li><a tabindex="-1" href="cadastrarFormaPagamento.php">Cadastrar Forma de pagamento</a></li>
+                        <li><a tabindex="-1" href="{{ path('tipocobrancapagamento') }}">Forma de pagamento</a></li>
                         <li class="divider"></li>
-                        <li><a tabindex="-1" href="cadastrarServico.php">Cadastrar Serviço</a></li>
-                        <li><a tabindex="-1" href="cadastrarPeca.php">Cadastrar Peça</a></li>
-                        <li><a tabindex="-1" href="cadastrarTecido.php">Cadastrar Tecido</a></li>
+                        <li><a tabindex="-1" href="{{ path('servico') }}">Serviços</a></li>
+                        <li><a tabindex="-1" href="{{ path('item') }}">Peças</a></li>
                         <li class="divider"></li>
                         <li><a tabindex="-1" href="planoContaPadrao.php">Plano de contas padrão</a></li>
                     </ul>

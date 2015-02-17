@@ -81,10 +81,10 @@ class Lancamento
      *
      * @ORM\ManyToOne(targetEntity="Os")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="os_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="os_id", referencedColumnName="id", nullable=false)
      * })
      */
-    private $os;
+    private $os = null;
 
 
 

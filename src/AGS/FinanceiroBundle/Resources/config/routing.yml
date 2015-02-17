@@ -1,3 +1,7 @@
+financeiro_insumo:
+    resource: "@FinanceiroBundle/Resources/config/routing/insumo.yml"
+    prefix:   /insumo
+
 financeiro_cliente:
     resource: "@FinanceiroBundle/Resources/config/routing/cliente.yml"
     prefix:   /cliente

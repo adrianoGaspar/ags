@@ -1,0 +1,30 @@
+insumo:
+    path:     /
+    defaults: { _controller: "FinanceiroBundle:Insumo:index" }
+
+insumo_show:
+    path:     /{id}/show
+    defaults: { _controller: "FinanceiroBundle:Insumo:show" }
+
+insumo_new:
+    path:     /new
+    defaults: { _controller: "FinanceiroBundle:Insumo:new" }
+
+insumo_create:
+    path:     /create
+    defaults: { _controller: "FinanceiroBundle:Insumo:create" }
+    methods:  POST
+
+insumo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FinanceiroBundle:Insumo:edit" }
+
+insumo_update:
+    path:     /{id}/update
+    defaults: { _controller: "FinanceiroBundle:Insumo:update" }
+    methods:  [POST, PUT]
+
+insumo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FinanceiroBundle:Insumo:delete" }
+    methods:  [POST, DELETE]

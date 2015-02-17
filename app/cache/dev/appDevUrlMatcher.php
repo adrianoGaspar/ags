@@ -27,7 +27,20 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         $context = $this->context;
         $request = $this->request;
 
-        if (0 === strpos($pathinfo, '/assetic')) {
+        if (0 === strpos($pathinfo, '/assetic/bootstrap_')) {
+            if (0 === strpos($pathinfo, '/assetic/bootstrap_js')) {
+                // _assetic_bootstrap_js
+                if ($pathinfo === '/assetic/bootstrap_js.js') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_bootstrap_js',);
+                }
+
+                // _assetic_bootstrap_js_0
+                if ($pathinfo === '/assetic/bootstrap_js_bootstrap_1.js') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_0',);
+                }
+
+            }
+
             if (0 === strpos($pathinfo, '/assetic/bootstrap_css')) {
                 // _assetic_bootstrap_css
                 if ($pathinfo === '/assetic/bootstrap_css.css') {
@@ -45,32 +58,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                         return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_css',  'pos' => 1,  '_format' => 'css',  '_route' => '_assetic_bootstrap_css_1',);
                     }
 
-                }
-
-            }
-
-            if (0 === strpos($pathinfo, '/assetic/jquery')) {
-                // _assetic_jquery
-                if ($pathinfo === '/assetic/jquery.js') {
-                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'jquery',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_jquery',);
-                }
-
-                // _assetic_jquery_0
-                if ($pathinfo === '/assetic/jquery_jquery_1.js') {
-                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'jquery',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_jquery_0',);
-                }
-
-            }
-
-            if (0 === strpos($pathinfo, '/assetic/bootstrap_js')) {
-                // _assetic_bootstrap_js
-                if ($pathinfo === '/assetic/bootstrap_js.js') {
-                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_bootstrap_js',);
-                }
-
-                // _assetic_bootstrap_js_0
-                if ($pathinfo === '/assetic/bootstrap_js_bootstrap_1.js') {
-                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_0',);
                 }
 
             }
@@ -116,6 +103,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // _assetic_bootstrap_glyphicons_woff_0
             if ($pathinfo === '/fonts/glyphicons-halflings-regular_glyphicons-halflings-regular_1.woff') {
                 return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_glyphicons_woff',  'pos' => 0,  '_format' => 'woff',  '_route' => '_assetic_bootstrap_glyphicons_woff_0',);
+            }
+
+        }
+
+        if (0 === strpos($pathinfo, '/assetic/jquery')) {
+            // _assetic_jquery
+            if ($pathinfo === '/assetic/jquery.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'jquery',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_jquery',);
+            }
+
+            // _assetic_jquery_0
+            if ($pathinfo === '/assetic/jquery_jquery_1.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'jquery',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_jquery_0',);
             }
 
         }
@@ -251,6 +251,66 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             if (0 === strpos($pathinfo, '/_error') && preg_match('#^/_error/(?P<code>\\d+)(?:\\.(?P<_format>[^/]++))?$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => '_twig_error_test')), array (  '_controller' => 'twig.controller.preview_error:previewErrorPageAction',  '_format' => 'html',));
             }
+
+        }
+
+        if (0 === strpos($pathinfo, '/insumo')) {
+            // insumo
+            if (rtrim($pathinfo, '/') === '/insumo') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'insumo');
+                }
+
+                return array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\InsumoController::indexAction',  '_route' => 'insumo',);
+            }
+
+            // insumo_show
+            if (preg_match('#^/insumo/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'insumo_show')), array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\InsumoController::showAction',));
+            }
+
+            // insumo_new
+            if ($pathinfo === '/insumo/new') {
+                return array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\InsumoController::newAction',  '_route' => 'insumo_new',);
+            }
+
+            // insumo_create
+            if ($pathinfo === '/insumo/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_insumo_create;
+                }
+
+                return array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\InsumoController::createAction',  '_route' => 'insumo_create',);
+            }
+            not_insumo_create:
+
+            // insumo_edit
+            if (preg_match('#^/insumo/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'insumo_edit')), array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\InsumoController::editAction',));
+            }
+
+            // insumo_update
+            if (preg_match('#^/insumo/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                    $allow = array_merge($allow, array('POST', 'PUT'));
+                    goto not_insumo_update;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'insumo_update')), array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\InsumoController::updateAction',));
+            }
+            not_insumo_update:
+
+            // insumo_delete
+            if (preg_match('#^/insumo/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                    $allow = array_merge($allow, array('POST', 'DELETE'));
+                    goto not_insumo_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'insumo_delete')), array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\InsumoController::deleteAction',));
+            }
+            not_insumo_delete:
 
         }
 

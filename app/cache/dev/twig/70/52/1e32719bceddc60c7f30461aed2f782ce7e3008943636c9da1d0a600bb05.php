@@ -38,7 +38,7 @@ class __TwigTemplate_70521e32719bceddc60c7f30461aed2f782ce7e3008943636c9da1d0a60
         // line 4
         echo "<h1>PlanoConta</h1>
 
-    <table class=\"record_properties\">
+    <table class=\"table\">
         <tbody>
             <tr>
                 <th>Id</th>

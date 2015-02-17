@@ -22,7 +22,7 @@ class LancamentoType extends AbstractType
             ->add('obs')
             ->add('planoConta')
             ->add('tipoCobrancaPagamento')
-            ->add('os')
+//            ->add('os')
         ;
     }
     

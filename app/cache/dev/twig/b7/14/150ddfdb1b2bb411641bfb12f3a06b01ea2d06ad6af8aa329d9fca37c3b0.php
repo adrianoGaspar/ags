@@ -91,14 +91,12 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
                     </ul>
                 </li>
                 <li class=\"dropdown\">
-                    <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">Clientes <span class=\"caret\"></span></a>
+                    <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">Clientes<span class=\"caret\"></span></a>
                     <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
-                        <li><a tabindex=\"-1\" href=\"cadastrarClientePj.php\">Cadastrar PJ</a></li>
-                        <li><a tabindex=\"-1\" href=\"cadastrarClientePf.php\">Cadastrar PF</a></li>
                         <li><a tabindex=\"-1\" href=\"";
-        // line 50
+        // line 48
         echo $this->env->getExtension('routing')->getPath("cliente");
-        echo "\">Consultar</a></li>
+        echo "\">Clientes</a></li>
                     </ul>
                 </li>
                 <li class=\"dropdown\">
@@ -121,7 +119,7 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
                         <li><a tabindex=\"-1\" href=\"consultarMovimentacao.php\">Consultar Movimentação</a></li>
                         <li class=\"divider\"></li>
                         <li><a tabindex=\"-1\" href=\"";
-        // line 72
+        // line 70
         echo $this->env->getExtension('routing')->getPath("planoconta");
         echo "\">Plano de contas</a></li>
                         <li class=\"divider\"></li>
@@ -140,23 +138,31 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
                         <li><a tabindex=\"-1\" href=\"pontosColeta.php\">Pontos de coleta</a></li>
                         <li class=\"divider\"></li>
                         <li><a tabindex=\"-1\" href=\"";
-        // line 88
+        // line 86
         echo $this->env->getExtension('routing')->getPath("pais");
         echo "\">Países</a></li>
                         <li><a tabindex=\"-1\" href=\"";
-        // line 89
+        // line 87
         echo $this->env->getExtension('routing')->getPath("estado");
         echo "\">Estados</a></li>
                         <li><a tabindex=\"-1\" href=\"";
-        // line 90
+        // line 88
         echo $this->env->getExtension('routing')->getPath("cidade");
         echo "\">Cidades</a></li>
                         <li class=\"divider\"></li>
-                        <li><a tabindex=\"-1\" href=\"cadastrarFormaPagamento.php\">Cadastrar Forma de pagamento</a></li>
+                        <li><a tabindex=\"-1\" href=\"";
+        // line 90
+        echo $this->env->getExtension('routing')->getPath("tipocobrancapagamento");
+        echo "\">Forma de pagamento</a></li>
                         <li class=\"divider\"></li>
-                        <li><a tabindex=\"-1\" href=\"cadastrarServico.php\">Cadastrar Serviço</a></li>
-                        <li><a tabindex=\"-1\" href=\"cadastrarPeca.php\">Cadastrar Peça</a></li>
-                        <li><a tabindex=\"-1\" href=\"cadastrarTecido.php\">Cadastrar Tecido</a></li>
+                        <li><a tabindex=\"-1\" href=\"";
+        // line 92
+        echo $this->env->getExtension('routing')->getPath("servico");
+        echo "\">Serviços</a></li>
+                        <li><a tabindex=\"-1\" href=\"";
+        // line 93
+        echo $this->env->getExtension('routing')->getPath("item");
+        echo "\">Peças</a></li>
                         <li class=\"divider\"></li>
                         <li><a tabindex=\"-1\" href=\"planoContaPadrao.php\">Plano de contas padrão</a></li>
                     </ul>
@@ -172,19 +178,19 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
         </div>
         
         ";
-        // line 111
+        // line 108
         $this->displayBlock('body', $context, $blocks);
-        // line 112
+        // line 109
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 113
+        // line 110
         echo "
         ";
-        // line 114
+        // line 111
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "a56fa94_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_a56fa94_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/js/a56fa94_part_1.js");
-            // line 115
+            // line 112
             echo "            <script type=\"text/javascript\" src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
@@ -204,7 +210,7 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
         ";
         }
         unset($context["asset_url"]);
-        // line 117
+        // line 114
         echo "    </body>
 </html>
 ";
@@ -221,12 +227,12 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
     {
     }
 
-    // line 111
+    // line 108
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 112
+    // line 109
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -243,6 +249,6 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
 
     public function getDebugInfo()
     {
-        return array (  230 => 112,  225 => 111,  220 => 6,  214 => 5,  208 => 117,  188 => 115,  184 => 114,  181 => 113,  178 => 112,  176 => 111,  152 => 90,  148 => 89,  144 => 88,  125 => 72,  100 => 50,  89 => 42,  84 => 40,  63 => 21,  59 => 12,  45 => 10,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
+        return array (  236 => 109,  231 => 108,  226 => 6,  220 => 5,  214 => 114,  194 => 112,  190 => 111,  187 => 110,  184 => 109,  182 => 108,  164 => 93,  160 => 92,  155 => 90,  150 => 88,  146 => 87,  142 => 86,  123 => 70,  98 => 48,  89 => 42,  84 => 40,  63 => 21,  59 => 12,  45 => 10,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
     }
 }

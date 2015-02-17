@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Lista de Ordens de Serviço</h1>
+    <h1>Ordens de Serviço</h1>
 
     <table class="table">
         <thead>
@@ -11,6 +11,7 @@
                 <th>Dataprometida</th>
                 <th>Datapacote</th>
                 <th>Dataentrega</th>
+                <th>Cliente</th>
                 <th>Valorcobrado</th>
                 <th>Obs</th>
                 <th>Status</th>
@@ -21,10 +22,11 @@
         {% for entity in entities %}
             <tr>
                 <td><a href="{{ path('os_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{#{% if entity.dataCadastro %}{{ entity.dataCadastro|date('d/m/Y H:i:s') }}{% endif %}#}</td>
+                <td>{% if entity.dataCadastro %}{{ entity.dataCadastro|date('d/m/Y H:i:s') }}{% endif %}</td>
                 <td>{% if entity.dataPrometida %}{{ entity.dataPrometida|date('d/m/Y H:i:s') }}{% endif %}</td>
                 <td>{% if entity.dataPacote %}{{ entity.dataPacote|date('d/m/Y H:i:s') }}{% endif %}</td>
                 <td>{% if entity.dataEntrega %}{{ entity.dataEntrega|date('d/m/Y H:i:s') }}{% endif %}</td>
+                <td>{{ entity.cliente }}</td>
                 <td>R$ {{ entity.valorCobrado }}</td>
                 <td>{{ entity.obs }}</td>
                 <td>{{ entity.status }}</td>
