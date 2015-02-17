@@ -70,6 +70,29 @@ class Cliente
      */
     private $created;
 
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Os", mappedBy="cliente")
+     **/
+    private $oss;
+
+    /**
+     * 
+     * @return Os
+     */
+    function getOss() {
+        return $this->oss;
+    }
+
+    /**
+     * Set oss
+     *
+     * @param \AGS\FinanceiroBundle\Entity\Os $oss
+     * @return Os
+     */
+    function setOss(Os $oss) {
+        $this->oss = $oss;
+    }
 
     /**
      * @ORM\OneToOne(targetEntity="Pf", mappedBy="cliente", cascade={"persist"})
@@ -93,16 +116,25 @@ class Cliente
      */
     private $pj;
 
+    
+    
+    /**
+     * 
+     * @param \AGS\FinanceiroBundle\Entity\Pj $pj
+     */
     public function setPj(Pj $pj)
     {
         $pj->setCliente($this);
         $this->pj = $pj;
     }
     
+    /**
+     * 
+     * @return Pj
+     */
     function getPj() {
         return $this->pj;
     }
-
     
     /**
      * Get id

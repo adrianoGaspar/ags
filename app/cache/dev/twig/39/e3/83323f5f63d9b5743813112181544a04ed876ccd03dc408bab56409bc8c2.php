@@ -96,13 +96,79 @@ class __TwigTemplate_39e383323f5f63d9b5743813112181544a04ed876ccd03dc408bab56409
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "created", array()), "Y-m-d H:i:s"), "html", null, true);
         echo "</td>
             </tr>
+            <tr>
+                <th>Os's do cliente</th>
+                <td colspan=\"6\">
+                    <table class=\"table\">
+                        <thead>
+                            <th>Id</th>
+                            <th>Cadastrado</th>
+                            <th>Prometido</th>
+                            <th>Empacotado</th>
+                            <th>Entrega</th>
+                            <th>Valor</th>
+                            <th>Obs</th>
+                            <th>Status</th>
+                        </thead>
+                        <tbody>
+                            ";
+        // line 55
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "oss", array()));
+        foreach ($context['_seq'] as $context["_key"] => $context["os"]) {
+            // line 56
+            echo "                            <tr>
+                                <td>";
+            // line 57
+            echo twig_escape_filter($this->env, $this->getAttribute($context["os"], "id", array()), "html", null, true);
+            echo "</td>
+                                <td>";
+            // line 58
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["os"], "dataCadastro", array()), "d/m/Y H:i:s"), "html", null, true);
+            echo "</td>
+                                <td>";
+            // line 59
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["os"], "dataPrometida", array()), "d/m/Y H:i:s"), "html", null, true);
+            echo "</td>
+                                <td>";
+            // line 60
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["os"], "dataPacote", array()), "d/m/Y H:i:s"), "html", null, true);
+            echo "</td>
+                                <td>";
+            // line 61
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["os"], "dataEntrega", array()), "d/m/Y H:i:s"), "html", null, true);
+            echo "</td>
+                                <td>";
+            // line 62
+            echo twig_escape_filter($this->env, $this->getAttribute($context["os"], "valorCobrado", array()), "html", null, true);
+            echo "</td>
+                                <td>";
+            // line 63
+            echo twig_escape_filter($this->env, $this->getAttribute($context["os"], "obs", array()), "html", null, true);
+            echo "</td>
+                                <td>";
+            // line 64
+            echo twig_escape_filter($this->env, $this->getAttribute($context["os"], "status", array()), "html", null, true);
+            echo "</td>
+                            </tr>
+                            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['os'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 67
+        echo "                        </tbody>
+                    </table>
+                </td>
+                
+            </tr>
         </tbody>
     </table>
 
         <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 45
+        // line 77
         echo $this->env->getExtension('routing')->getPath("cliente");
         echo "\">
             Back to the list
@@ -110,14 +176,14 @@ class __TwigTemplate_39e383323f5f63d9b5743813112181544a04ed876ccd03dc408bab56409
     </li>
     <li>
         <a href=\"";
-        // line 50
+        // line 82
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cliente_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()))), "html", null, true);
         echo "\">
             Edit
         </a>
     </li>
     <li>";
-        // line 54
+        // line 86
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
 </ul>
@@ -136,6 +202,6 @@ class __TwigTemplate_39e383323f5f63d9b5743813112181544a04ed876ccd03dc408bab56409
 
     public function getDebugInfo()
     {
-        return array (  121 => 54,  114 => 50,  106 => 45,  96 => 38,  89 => 34,  82 => 30,  75 => 26,  68 => 22,  61 => 18,  54 => 14,  47 => 10,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  187 => 86,  180 => 82,  172 => 77,  160 => 67,  151 => 64,  147 => 63,  143 => 62,  139 => 61,  135 => 60,  131 => 59,  127 => 58,  123 => 57,  120 => 56,  116 => 55,  96 => 38,  89 => 34,  82 => 30,  75 => 26,  68 => 22,  61 => 18,  54 => 14,  47 => 10,  39 => 4,  36 => 3,  11 => 1,);
     }
 }

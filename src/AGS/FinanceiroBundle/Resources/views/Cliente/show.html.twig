@@ -37,6 +37,38 @@
                 <th>Created</th>
                 <td>{{ entity.created|date('Y-m-d H:i:s') }}</td>
             </tr>
+            <tr>
+                <th>Os's do cliente</th>
+                <td colspan="6">
+                    <table class="table">
+                        <thead>
+                            <th>Id</th>
+                            <th>Cadastrado</th>
+                            <th>Prometido</th>
+                            <th>Empacotado</th>
+                            <th>Entrega</th>
+                            <th>Valor</th>
+                            <th>Obs</th>
+                            <th>Status</th>
+                        </thead>
+                        <tbody>
+                            {% for os in entity.oss %}
+                            <tr>
+                                <td>{{ os.id }}</td>
+                                <td>{{ os.dataCadastro|date('d/m/Y H:i:s') }}</td>
+                                <td>{{ os.dataPrometida|date('d/m/Y H:i:s') }}</td>
+                                <td>{{ os.dataPacote|date('d/m/Y H:i:s') }}</td>
+                                <td>{{ os.dataEntrega|date('d/m/Y H:i:s') }}</td>
+                                <td>{{ os.valorCobrado }}</td>
+                                <td>{{ os.obs }}</td>
+                                <td>{{ os.status }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </td>
+                
+            </tr>
         </tbody>
     </table>
 

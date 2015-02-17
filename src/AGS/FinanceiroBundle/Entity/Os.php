@@ -74,7 +74,7 @@ class Os
     /**
      * @var \Cliente
      *
-     * @ORM\ManyToOne(targetEntity="Cliente")
+     * @ORM\ManyToOne(targetEntity="Cliente", inversedBy="oss")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="cliente_id", referencedColumnName="id")
      * })

@@ -38,7 +38,7 @@ class __TwigTemplate_b72858731cdeffa0c5dfc80e08927995d8d7b8be1ad9e68c184a148d071
         // line 4
         echo "<h1>Endereco</h1>
 
-    <table class=\"record_properties\">
+    <table class=\"table\">
         <tbody>
             <tr>
                 <th>Id</th>

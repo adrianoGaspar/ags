@@ -38,7 +38,7 @@ class __TwigTemplate_fe1ff830e5cf4f3ad73ebd2bd3deb72cdaabf19dac14adf898e961091cb
         // line 4
         echo "<h1>Lancamento</h1>
 
-    <table class=\"record_properties\">
+    <table class=\"table\">
         <tbody>
             <tr>
                 <th>Id</th>
