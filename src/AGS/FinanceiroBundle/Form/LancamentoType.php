@@ -16,16 +16,36 @@ class LancamentoType extends AbstractType
     {
         $builder
             ->add('dataVencimento')
-            ->add('situacao')
-            ->add('tipo')
+
+            ->add('situacao', 'checkbox', array(
+                'label'     => ' Quitado ?',
+                'required'  => false,
+            ))
+                
+            ->add('tipo', 'choice', array(
+                'choices' => array(
+                    'D' => 'Débito',
+                    'C' => 'Crédito'
+                ),
+                'expanded' => true,
+                'multiple' => false,
+                'required' => true,
+             ))
+                
             ->add('valor')
             ->add('obs')
-            ->add('planoConta')
-            ->add('tipoCobrancaPagamento')
-//            ->add('os')
+                
+            ->add('planoConta', null , array(
+                    'placeholder'=>'Selecione o plano de contas'
+                )
+            )
+            ->add('tipoCobrancaPagamento', null , array(
+                    'placeholder'=>'Selecione o documento de cobrança ou pagamento'
+                )
+            )
         ;
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */

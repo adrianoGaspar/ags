@@ -38,7 +38,7 @@ class Lancamento
     /**
      * @var string
      *
-     * @ORM\Column(name="tipo", type="string", length=45, nullable=false)
+     * @ORM\Column(name="tipo", type="string", columnDefinition="ENUM('D','C')") 
      */
     private $tipo;
 

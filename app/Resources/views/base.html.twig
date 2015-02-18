@@ -51,25 +51,20 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Fornecedores <span class="caret"></span></a>
                     <ul class="dropdown-menu navbar-default" aria-labelledby="themes">
-                        <li><a tabindex="-1" href="cadastrarPedido.php">Cadastrar Pedidos</a></li>
-                        <li><a tabindex="-1" href="consultarPedido.php">Consultar Pedidos</a></li>
+                        <li><a tabindex="-1" href="consultarPedido.php">Pedidos</a></li>
                         <li class="divider"></li>
-                        <li><a tabindex="-1" href="cadastrarFornecedor.php">Cadastrar Fornecedor</a></li>
-                        <li><a tabindex="-1" href="consultarFornecedor.php">Consultar Fornecedor</a></li>
+                        <li><a tabindex="-1" href="consultarFornecedor.php">Fornecedores</a></li>
                         <li class="divider"></li>
-                        <li><a tabindex="-1" href="cadastrarInsumo.php">Cadastrar Insumo</a></li>
-                        <li><a tabindex="-1" href="consultarInsumo.php">Consultar Insumo</a></li>
+                        <li><a tabindex="-1" href="{{ path('insumo') }}">Insumos</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Financeiro <span class="caret"></span></a>
                     <ul class="dropdown-menu navbar-default" aria-labelledby="themes">
-                        <li><a tabindex="-1" href="agendarMovimentacao.php">Cadastrar Movimentação</a></li>
-                        <li><a tabindex="-1" href="consultarMovimentacao.php">Consultar Movimentação</a></li>
+                        <li><a tabindex="-1" href="{{ path('lancamento') }}">Movimentação</a></li>
                         <li class="divider"></li>
                         <li><a tabindex="-1" href="{{ path('planoconta') }}">Plano de contas</a></li>
                         <li class="divider"></li>
-                        <li><a tabindex="-1" href="cadastrarBeneficiario.php">Beneficiários</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">

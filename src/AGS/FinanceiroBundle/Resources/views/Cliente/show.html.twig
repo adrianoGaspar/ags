@@ -54,7 +54,11 @@
                         <tbody>
                             {% for os in entity.oss %}
                             <tr>
-                                <td>{{ os.id }}</td>
+                                <td>
+                                    <a href="{{ path('os_show', { 'id': os.id }) }}">                                    
+                                        {{ os.id }}
+                                    </a>
+                                </td>
                                 <td>{{ os.dataCadastro|date('d/m/Y H:i:s') }}</td>
                                 <td>{{ os.dataPrometida|date('d/m/Y H:i:s') }}</td>
                                 <td>{{ os.dataPacote|date('d/m/Y H:i:s') }}</td>
