@@ -102,7 +102,10 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
                 <li class=\"dropdown\">
                     <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"themes\">Fornecedores <span class=\"caret\"></span></a>
                     <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
-                        <li><a tabindex=\"-1\" href=\"consultarPedido.php\">Pedidos</a></li>
+                        <li><a tabindex=\"-1\" href=\"";
+        // line 54
+        echo $this->env->getExtension('routing')->getPath("pedido");
+        echo "\">Pedidos</a></li>
                         <li class=\"divider\"></li>
                         <li><a tabindex=\"-1\" href=\"";
         // line 56
@@ -253,6 +256,6 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
 
     public function getDebugInfo()
     {
-        return array (  240 => 104,  235 => 103,  230 => 6,  224 => 5,  218 => 109,  198 => 107,  194 => 106,  191 => 105,  188 => 104,  186 => 103,  168 => 88,  164 => 87,  159 => 85,  154 => 83,  150 => 82,  146 => 81,  128 => 66,  123 => 64,  114 => 58,  109 => 56,  98 => 48,  89 => 42,  84 => 40,  63 => 21,  59 => 12,  45 => 10,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
+        return array (  243 => 104,  238 => 103,  233 => 6,  227 => 5,  221 => 109,  201 => 107,  197 => 106,  194 => 105,  191 => 104,  189 => 103,  171 => 88,  167 => 87,  162 => 85,  157 => 83,  153 => 82,  149 => 81,  131 => 66,  126 => 64,  117 => 58,  112 => 56,  107 => 54,  98 => 48,  89 => 42,  84 => 40,  63 => 21,  59 => 12,  45 => 10,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
     }
 }
