@@ -1,0 +1,30 @@
+pedido:
+    path:     /
+    defaults: { _controller: "FinanceiroBundle:Pedido:index" }
+
+pedido_show:
+    path:     /{id}/show
+    defaults: { _controller: "FinanceiroBundle:Pedido:show" }
+
+pedido_new:
+    path:     /new
+    defaults: { _controller: "FinanceiroBundle:Pedido:new" }
+
+pedido_create:
+    path:     /create
+    defaults: { _controller: "FinanceiroBundle:Pedido:create" }
+    methods:  POST
+
+pedido_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FinanceiroBundle:Pedido:edit" }
+
+pedido_update:
+    path:     /{id}/update
+    defaults: { _controller: "FinanceiroBundle:Pedido:update" }
+    methods:  [POST, PUT]
+
+pedido_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FinanceiroBundle:Pedido:delete" }
+    methods:  [POST, DELETE]

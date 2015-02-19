@@ -104,7 +104,10 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
                     <ul class=\"dropdown-menu navbar-default\" aria-labelledby=\"themes\">
                         <li><a tabindex=\"-1\" href=\"consultarPedido.php\">Pedidos</a></li>
                         <li class=\"divider\"></li>
-                        <li><a tabindex=\"-1\" href=\"consultarFornecedor.php\">Fornecedores</a></li>
+                        <li><a tabindex=\"-1\" href=\"";
+        // line 56
+        echo $this->env->getExtension('routing')->getPath("fornecedor");
+        echo "\">Fornecedores</a></li>
                         <li class=\"divider\"></li>
                         <li><a tabindex=\"-1\" href=\"";
         // line 58
@@ -125,7 +128,6 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
         echo $this->env->getExtension('routing')->getPath("planoconta");
         echo "\">Plano de contas</a></li>
                         <li class=\"divider\"></li>
-                        <li><a tabindex=\"-1\" href=\"cadastrarBeneficiario.php\">Beneficiários</a></li>
                     </ul>
                 </li>
                 <li class=\"dropdown\">
@@ -140,29 +142,29 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
                         <li><a tabindex=\"-1\" href=\"pontosColeta.php\">Pontos de coleta</a></li>
                         <li class=\"divider\"></li>
                         <li><a tabindex=\"-1\" href=\"";
-        // line 82
+        // line 81
         echo $this->env->getExtension('routing')->getPath("pais");
         echo "\">Países</a></li>
                         <li><a tabindex=\"-1\" href=\"";
-        // line 83
+        // line 82
         echo $this->env->getExtension('routing')->getPath("estado");
         echo "\">Estados</a></li>
                         <li><a tabindex=\"-1\" href=\"";
-        // line 84
+        // line 83
         echo $this->env->getExtension('routing')->getPath("cidade");
         echo "\">Cidades</a></li>
                         <li class=\"divider\"></li>
                         <li><a tabindex=\"-1\" href=\"";
-        // line 86
+        // line 85
         echo $this->env->getExtension('routing')->getPath("tipocobrancapagamento");
         echo "\">Forma de pagamento</a></li>
                         <li class=\"divider\"></li>
                         <li><a tabindex=\"-1\" href=\"";
-        // line 88
+        // line 87
         echo $this->env->getExtension('routing')->getPath("servico");
         echo "\">Serviços</a></li>
                         <li><a tabindex=\"-1\" href=\"";
-        // line 89
+        // line 88
         echo $this->env->getExtension('routing')->getPath("item");
         echo "\">Peças</a></li>
                         <li class=\"divider\"></li>
@@ -180,19 +182,19 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
         </div>
         
         ";
-        // line 104
+        // line 103
         $this->displayBlock('body', $context, $blocks);
-        // line 105
+        // line 104
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 106
+        // line 105
         echo "
         ";
-        // line 107
+        // line 106
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "a56fa94_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_a56fa94_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/js/a56fa94_part_1.js");
-            // line 108
+            // line 107
             echo "            <script type=\"text/javascript\" src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
@@ -212,7 +214,7 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
         ";
         }
         unset($context["asset_url"]);
-        // line 110
+        // line 109
         echo "    </body>
 </html>
 ";
@@ -229,12 +231,12 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
     {
     }
 
-    // line 104
+    // line 103
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 105
+    // line 104
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -251,6 +253,6 @@ class __TwigTemplate_b714150ddfdb1b2bb411641bfb12f3a06b01ea2d06ad6af8aa329d9fca3
 
     public function getDebugInfo()
     {
-        return array (  238 => 105,  233 => 104,  228 => 6,  222 => 5,  216 => 110,  196 => 108,  192 => 107,  189 => 106,  186 => 105,  184 => 104,  166 => 89,  162 => 88,  157 => 86,  152 => 84,  148 => 83,  144 => 82,  125 => 66,  120 => 64,  111 => 58,  98 => 48,  89 => 42,  84 => 40,  63 => 21,  59 => 12,  45 => 10,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
+        return array (  240 => 104,  235 => 103,  230 => 6,  224 => 5,  218 => 109,  198 => 107,  194 => 106,  191 => 105,  188 => 104,  186 => 103,  168 => 88,  164 => 87,  159 => 85,  154 => 83,  150 => 82,  146 => 81,  128 => 66,  123 => 64,  114 => 58,  109 => 56,  98 => 48,  89 => 42,  84 => 40,  63 => 21,  59 => 12,  45 => 10,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
     }
 }

@@ -185,4 +185,12 @@ class Pf
     {
         return $this->cliente;
     }
+
+    /**
+     * 
+     * @return string
+     */
+    public function __toString() {
+        return $this->nome;
+    }
 }

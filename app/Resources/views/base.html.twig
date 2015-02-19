@@ -51,9 +51,9 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Fornecedores <span class="caret"></span></a>
                     <ul class="dropdown-menu navbar-default" aria-labelledby="themes">
-                        <li><a tabindex="-1" href="consultarPedido.php">Pedidos</a></li>
+                        <li><a tabindex="-1" href="{{ path('pedido') }}">Pedidos</a></li>
                         <li class="divider"></li>
-                        <li><a tabindex="-1" href="consultarFornecedor.php">Fornecedores</a></li>
+                        <li><a tabindex="-1" href="{{ path('fornecedor') }}">Fornecedores</a></li>
                         <li class="divider"></li>
                         <li><a tabindex="-1" href="{{ path('insumo') }}">Insumos</a></li>
                     </ul>

@@ -1,0 +1,30 @@
+fornecedor:
+    path:     /
+    defaults: { _controller: "FinanceiroBundle:Fornecedor:index" }
+
+fornecedor_show:
+    path:     /{id}/show
+    defaults: { _controller: "FinanceiroBundle:Fornecedor:show" }
+
+fornecedor_new:
+    path:     /new
+    defaults: { _controller: "FinanceiroBundle:Fornecedor:new" }
+
+fornecedor_create:
+    path:     /create
+    defaults: { _controller: "FinanceiroBundle:Fornecedor:create" }
+    methods:  POST
+
+fornecedor_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FinanceiroBundle:Fornecedor:edit" }
+
+fornecedor_update:
+    path:     /{id}/update
+    defaults: { _controller: "FinanceiroBundle:Fornecedor:update" }
+    methods:  [POST, PUT]
+
+fornecedor_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FinanceiroBundle:Fornecedor:delete" }
+    methods:  [POST, DELETE]

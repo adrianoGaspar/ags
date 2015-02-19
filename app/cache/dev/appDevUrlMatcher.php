@@ -254,6 +254,126 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/pedido')) {
+            // pedido
+            if (rtrim($pathinfo, '/') === '/pedido') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'pedido');
+                }
+
+                return array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\PedidoController::indexAction',  '_route' => 'pedido',);
+            }
+
+            // pedido_show
+            if (preg_match('#^/pedido/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pedido_show')), array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\PedidoController::showAction',));
+            }
+
+            // pedido_new
+            if ($pathinfo === '/pedido/new') {
+                return array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\PedidoController::newAction',  '_route' => 'pedido_new',);
+            }
+
+            // pedido_create
+            if ($pathinfo === '/pedido/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_pedido_create;
+                }
+
+                return array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\PedidoController::createAction',  '_route' => 'pedido_create',);
+            }
+            not_pedido_create:
+
+            // pedido_edit
+            if (preg_match('#^/pedido/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pedido_edit')), array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\PedidoController::editAction',));
+            }
+
+            // pedido_update
+            if (preg_match('#^/pedido/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                    $allow = array_merge($allow, array('POST', 'PUT'));
+                    goto not_pedido_update;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pedido_update')), array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\PedidoController::updateAction',));
+            }
+            not_pedido_update:
+
+            // pedido_delete
+            if (preg_match('#^/pedido/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                    $allow = array_merge($allow, array('POST', 'DELETE'));
+                    goto not_pedido_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pedido_delete')), array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\PedidoController::deleteAction',));
+            }
+            not_pedido_delete:
+
+        }
+
+        if (0 === strpos($pathinfo, '/fornecedor')) {
+            // fornecedor
+            if (rtrim($pathinfo, '/') === '/fornecedor') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'fornecedor');
+                }
+
+                return array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\FornecedorController::indexAction',  '_route' => 'fornecedor',);
+            }
+
+            // fornecedor_show
+            if (preg_match('#^/fornecedor/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fornecedor_show')), array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\FornecedorController::showAction',));
+            }
+
+            // fornecedor_new
+            if ($pathinfo === '/fornecedor/new') {
+                return array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\FornecedorController::newAction',  '_route' => 'fornecedor_new',);
+            }
+
+            // fornecedor_create
+            if ($pathinfo === '/fornecedor/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_fornecedor_create;
+                }
+
+                return array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\FornecedorController::createAction',  '_route' => 'fornecedor_create',);
+            }
+            not_fornecedor_create:
+
+            // fornecedor_edit
+            if (preg_match('#^/fornecedor/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fornecedor_edit')), array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\FornecedorController::editAction',));
+            }
+
+            // fornecedor_update
+            if (preg_match('#^/fornecedor/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                    $allow = array_merge($allow, array('POST', 'PUT'));
+                    goto not_fornecedor_update;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fornecedor_update')), array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\FornecedorController::updateAction',));
+            }
+            not_fornecedor_update:
+
+            // fornecedor_delete
+            if (preg_match('#^/fornecedor/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                    $allow = array_merge($allow, array('POST', 'DELETE'));
+                    goto not_fornecedor_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fornecedor_delete')), array (  '_controller' => 'AGS\\FinanceiroBundle\\Controller\\FornecedorController::deleteAction',));
+            }
+            not_fornecedor_delete:
+
+        }
+
         if (0 === strpos($pathinfo, '/insumo')) {
             // insumo
             if (rtrim($pathinfo, '/') === '/insumo') {

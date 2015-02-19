@@ -39,7 +39,6 @@ class Estado
     private $pais;
 
 
-
     /**
      * Get id
      *
@@ -94,5 +93,9 @@ class Estado
     public function getPais()
     {
         return $this->pais;
+    }
+    
+    public function __toString() {
+        return $this->estado;
     }
 }

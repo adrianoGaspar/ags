@@ -1,3 +1,11 @@
+financeiro_pedido:
+    resource: "@FinanceiroBundle/Resources/config/routing/pedido.yml"
+    prefix:   /pedido
+
+financeiro_fornecedor:
+    resource: "@FinanceiroBundle/Resources/config/routing/fornecedor.yml"
+    prefix:   /fornecedor
+
 financeiro_insumo:
     resource: "@FinanceiroBundle/Resources/config/routing/insumo.yml"
     prefix:   /insumo

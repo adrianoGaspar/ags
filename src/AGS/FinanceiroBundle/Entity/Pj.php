@@ -52,7 +52,7 @@ class Pj
     /**
      * @var string
      *
-     * @ORM\Column(name="nome_fantasia", type="string", length=255, nullable=true)
+     * @ORM\Column(name="nome_fantasia", type="string", length=255, nullable=false)
      */
     private $nomeFantasia;
 
@@ -214,4 +214,15 @@ class Pj
     {
         return $this->cliente;
     }
+    
+    /**
+     * 
+     * @return string
+     */
+    public function __toString() {
+        if($this->nomeFantasia === null)
+            $this->nomeFantasia = 'nenhum registro cadastrado';
+        return $this->nomeFantasia;
+    }
+    
 }

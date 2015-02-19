@@ -39,7 +39,6 @@ class Fornecedor
     private $pj;
 
 
-
     /**
      * Get id
      *
